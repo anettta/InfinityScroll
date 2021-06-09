@@ -12,7 +12,7 @@ let initialCountOfPhotosLoaded = 5;
 // const collections = "interior";
 const orientationStyle = "landscape";
 const query = "mountains";
-const apiKey = UNSPLASH_API_KEY;
+const apiKey = process.env.UNSPLASH_API_KEY;
 let apiUrl = `https://api.unsplash.com/photos/random?client_id=${apiKey}&count=${initialCountOfPhotosLoaded}&query=${query}&orientation=${orientationStyle}`;
 
 function updateAPIURLWithNewCount(photoCount) {
